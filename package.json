@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "build-ghpages": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
