@@ -1,0 +1,9 @@
+.bg-custom {
+    background-color: #503F3B !important;
+    color: white;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
