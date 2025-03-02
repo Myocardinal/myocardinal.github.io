@@ -4,6 +4,8 @@ export default function (eleventyConfig) {
     // Copy `css/` to `_site/css/`
     eleventyConfig.addPassthroughCopy("css");
 
+
+
     eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 };
 
