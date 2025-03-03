@@ -1,9 +1,13 @@
+
+
 .bg-custom {
-    background-color: #503F3B !important;
-    color: white;
 }
 
 .content-wrapper {
-    max-width: 900px;
+    max-width: 1200px;
+    min-height: 100vh;
     margin: 0 auto;
+    flex:1;
+    display: flex;
+    flex-direction: column;
 }
