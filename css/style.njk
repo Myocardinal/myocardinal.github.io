@@ -1,16 +1,11 @@
+---
+permalink: css/style.css
+---
 
 :root {
-
-    --background: #503F3B;
-
-    --header: #4a0e0a;
-
-    --center: #000000B0;
-
-    --text: #ebd5d3;
-
-    --navbarCurrent: #877272;
-
+{% for key, value in colors %}
+    --{{ key }}: {{ value }};
+{% endfor %}
 }
 
 body {
@@ -29,29 +24,29 @@ body {
     flex:1;
     display: flex;
     flex-direction: column;
-    background-color: #000000B0
+    background-color: {{ colors.center }}
     /* opacity: 0.75; */
 }
 
 .inner-content-wrapper {
     padding: 2vw;
-    color: #ebd5d3;
+    color: {{ colors.text }};
 }
 
 /* Navbar colors */
 
 .navbar {
-    background-color: #4a0e0a;
+    background-color: {{ colors.header }};
 }
 
 .navbar-brand {
-    color: #ebd5d3;
+    color: {{ colors.text }};
 }
 
 .nav-link {
-    color: #ebd5d3;
+    color: {{ colors.text }};
 }
 
 .nav-link.active {
-    color: #877272 !important;
+    color: {{ colors.navbarCurrent }} !important;
 }
