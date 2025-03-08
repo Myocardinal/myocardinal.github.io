@@ -1,6 +1,5 @@
 ---
 layout: about.njk
-title: Myocardinal
 ---
 
 # About Me
