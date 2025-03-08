@@ -4,6 +4,9 @@ export default function (eleventyConfig) {
     // Copy `css/` to `_site/css/`
     eleventyConfig.addPassthroughCopy("css/");
 
+    // Copy img/ to _site/img/
+    eleventyConfig.addPassthroughCopy("img/")
+
     // Copy CNAME for github pages to point to my domain
     eleventyConfig.addPassthroughCopy({"config/CNAME": "CNAME"})
 

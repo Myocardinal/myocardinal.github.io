@@ -1,5 +1,7 @@
 {
   "background": "#503F3B",
-  "header": "#B15A49",
-  "centerColor": "#C47E70"
+  "header": "#4a0e0a",
+  "center": "#000000B0",
+  "text": "#ebd5d3",
+  "navbarCurrent": "#877272"
 }
