@@ -1,3 +1,7 @@
 package-lock.json
 node_modules/
 .idea/
+
+# Keep _site directory but do not add any files
+_site/*
+!_site/
