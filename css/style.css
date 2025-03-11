@@ -46,6 +46,8 @@ body {
 
 .navbar-brand {
     color: #ebd5d3;
+    pointer-events: none;
+    cursor: default;
 }
 
 .nav-link {
@@ -55,3 +57,7 @@ body {
 .nav-link.active {
     color: #877272 !important;
 }
+
+.navbar-nav .nav-link:hover {
+    color: #877272 !important;
+}}
