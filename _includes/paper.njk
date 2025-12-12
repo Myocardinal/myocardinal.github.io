@@ -1,0 +1,41 @@
+---
+activePage: "papers"
+---
+
+{% extends "base.njk" %}
+
+{% block content %}
+<article class="paper-detail">
+    <h1 class="mb-3">{{ title }}</h1>
+    
+    {% if date %}
+    <p class="text-muted mb-4">{{ date | dateFormat }}</p>
+    {% endif %}
+
+    {% if image %}
+    <div class="paper-hero mb-4">
+        <img src="{{ image }}" alt="{{ title }}" class="img-fluid rounded">
+    </div>
+    {% endif %}
+
+    {% if doi %}
+    <p class="mb-4">
+        <a href="{{ doi }}" target="_blank" rel="noopener" class="btn btn-outline-light">
+            View Paper (DOI)
+        </a>
+    </p>
+    {% endif %}
+
+    <div class="paper-content">
+        {{ content | safe }}
+    </div>
+
+    <hr class="my-5">
+
+    <p>
+        <a href="/papers/" class="text-decoration-none">&larr; Back to Papers</a>
+    </p>
+</article>
+{% endblock %}
+
+

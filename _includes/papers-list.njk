@@ -1,0 +1,40 @@
+---
+title: Papers
+activePage: "papers"
+---
+
+{% extends "base.njk" %}
+
+{% block content %}
+<h1 class="mb-4">Papers</h1>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for paper in collections.papers | reverse %}
+    <div class="col">
+        <div class="card h-100 paper-card">
+            {% if paper.data.image %}
+            <img src="{{ paper.data.image }}" class="card-img-top" alt="{{ paper.data.title }}">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ paper.data.title }}</h5>
+                {% if paper.data.blurb %}
+                <p class="card-text">{{ paper.data.blurb }}</p>
+                {% endif %}
+            </div>
+            <div class="card-footer">
+                <a href="{{ paper.url }}" class="btn btn-sm paper-btn me-2">Read More</a>
+                {% if paper.data.doi %}
+                <a href="{{ paper.data.doi }}" target="_blank" rel="noopener" class="btn btn-sm paper-btn-secondary">DOI</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if collections.papers.length == 0 %}
+<p class="text-muted">No papers yet.</p>
+{% endif %}
+
+{% endblock %}
+

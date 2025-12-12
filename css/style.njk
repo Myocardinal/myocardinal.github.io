@@ -55,4 +55,67 @@ body {
 
 .navbar-nav .nav-link:hover {
     color: {{ colors.navbarCurrent }} !important;
-}}
+}
+
+/* Paper cards */
+.paper-card {
+    background-color: rgba(74, 14, 10, 0.6);
+    border: 1px solid {{ colors.header }};
+    color: {{ colors.text }};
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.paper-card .card-img-top {
+    border-bottom: 1px solid {{ colors.header }};
+}
+
+.paper-card .card-footer {
+    background-color: transparent;
+    border-top: 1px solid {{ colors.header }};
+}
+
+.paper-btn {
+    color: {{ colors.text }};
+    border-color: {{ colors.text }};
+}
+
+.paper-btn:hover {
+    background-color: {{ colors.text }};
+    color: {{ colors.header }};
+}
+
+.paper-btn-secondary {
+    color: {{ colors.navbarCurrent }};
+    border-color: {{ colors.navbarCurrent }};
+}
+
+.paper-btn-secondary:hover {
+    background-color: {{ colors.navbarCurrent }};
+    color: #000;
+}
+
+/* Individual paper page */
+.paper-detail a {
+    color: {{ colors.text }};
+}
+
+.paper-detail .btn-outline-light {
+    border-color: {{ colors.text }};
+    color: {{ colors.text }};
+}
+
+.paper-detail .btn-outline-light:hover {
+    background-color: {{ colors.text }};
+    color: {{ colors.header }};
+}
+
+.paper-hero img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
